@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Programación Web 1</title>
+    <style>
+        /* --- ESTILOS GENERALES (CSS) --- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .container {
+            display: flex;
+            margin: 20px 0;
+            gap: 20px;
+        }
+        nav {
+            flex: 1;
+            background-color: #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            min-height: 350px;
+        }
+        nav h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+        nav button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        nav button:hover {
+            background-color: #0056b3;
+        }
+        main {
+            flex: 3;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            min-height: 350px;
+        }
+        .page-section {
+            display: none; /* Esconde las secciones por defecto */
+        }
+        .active {
+            display: block; /* Muestra solo la sección activa */
+        }
+
+        /* Estilos Pág 1: Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilos Pág 2: Banderas y Diseños Geométricos Replicados */
+        .grid-banderas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .caja-diseno {
+            border: 2px solid #333;
+            padding: 15px;
+            text-align: center;
+            background: #fafafa;
+            border-radius: 4px;
+        }
+        .bandera {
+            width: 180px;
+            height: 110px;
+            border: 1px solid #000;
+            margin: 0 auto 10px auto;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        .franja { flex: 1; }
+        .bo-rojo { background-color: #DA291C; }
+        .bo-amarillo { background-color: #F4E11E; }
+        .bo-verde { background-color: #007A33; }
+
+        /* Estilos Formularios y Campos */
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0 16px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn-accion {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn-accion:hover {
+            background-color: #218838;
+        }
+        .caja-resultado {
+            padding: 12px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        /* Estilo extra para el área de respuesta del clima */
+        .clima-alerta {
+            background-color: #e2f0d9;
+            color: #385723;
+            border: 1px solid #c5e0b4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PÁGINA DE PROGRAMACIÓN WEB 1</h1>
+    </header>
+
+    <div class="container">
+        <nav>
+            <h3>MENU</h3>
+            <button onclick="showPage('inicio')">Inicio</button>
+            <button onclick="showPage('pag1')">Pág 1: HTML</button>
+            <button onclick="showPage('pag2')">Pág 2: CSS</button>
+            <button onclick="showPage('pag3')">Pág 3: Formulario</button>
+            <button onclick="showPage('pag4')">Pág 4: Conversor</button>
+            <button onclick="showPage('pag5')" style="background-color: #dc3545;">Pág 5: Laboratorio Hoy</button>
+        </nav>
+
+        <main>
+            <section id="inicio" class="page-section active">
+                <h2>PÁGINA DE INICIO</h2>
+                <hr>
+                <div style="line-height: 1.6; margin-top: 15px;">
+                    <h3>¡Bienvenido al Portal de Laboratorios!</h3>
+                    <p>Esta plataforma web ha sido desarrollada para la materia de <strong>Programación Web 1</strong>, con el objetivo de demostrar la integración práctica de las tecnologías fundamentales del desarrollo Frontend: <strong>HTML5, CSS3 y JavaScript</strong>.</p>
+                    
+                    <p>A través del menú de la izquierda, se puede navegar por los diferentes módulos del proyecto, los cuales incluyen el manejo de estructuras de datos, diseños geométricos con estilos puros, validación lógica de formularios y una calculadora de conversión de bases numéricas en tiempo real.</p>
+                    
+                    <div style="background-color: #e9ecef; padding: 15px; border-left: 5px solid #007BFF; margin-top: 20px; border-radius: 4px;">
+                        <p style="margin: 0;"><strong>Estudiante:</strong> Mijael Josué Torrez Rodríguez</p>
+                        <p style="margin: 5px 0 0 0;"><strong>Gestión Académica:</strong> 2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag1" class="page-section">
+                <h2>Pág 1: Fundamentos de Creación Web</h2>
+                <hr>
+                
+                <div style="background-color: #f8f9fa; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                    <strong>Menú Interno de Navegación:</strong><br>
+                    <a href="#sec-listas">1. Tecnologías Esenciales</a> | 
+                    <a href="#sec-tablas">2. Matriz de Arquitectura Frontend</a> | 
+                    <a href="#sec-imagenes">3. Ciclo de Ejecución de Scripts</a>
+                </div>
+
+                <div id="sec-listas" style="margin-top: 30px; padding-top: 10px;">
+                    <h3>1. Tecnologías Esenciales del Ecosistema Web</h3>
+                    <p>Para construir aplicaciones web modernas e interactivas, se requiere la sincronización de tres pilares fundamentales que dividen la estructura, la presentación estética y el comportamiento lógico.</p>
+                    
+                    <h4>Estructura y Estilo Visual (HTML5 y CSS3)</h4>
+                    <ul>
+                        <li><strong>HTML5 (HyperText Markup Language):</strong> Se encarga de la maquetación semántica. Define dónde van los textos, los bloques de menú, las secciones dinámicas y los contenedores principales del sitio.</li>
+                        <li><strong>CSS3 (Cascading Style Sheets):</strong> Controla la capa estética. Se aplica para definir paletas cromáticas, posiciones espaciales (como grids o flexbox) y transiciones animadas sin alterar el contenido nativo.</li>
+                    </ul>
+
+                    <h4>Comportamiento Dinámico (JavaScript)</h4>
+                    <ol>
+                        <li>Captura los eventos del usuario en tiempo real (clics en botones, envíos de formularios).</li>
+                        <li>Procesa la información localmente mediante funciones y algoritmos matemáticos en el navegador.</li>
+                        <li>Modifica dinámicamente el documento de manera reactiva sin necesidad de recargar toda la página web.</li>
+                    </ol>
+                </div>
+
+                <div id="sec-tablas" style="margin-top: 40px; border-top: 1px dashed #ccc; padding-top: 20px;">
+                    <h3>2. Matriz de Arquitectura Frontend</h3>
+                    <p>Comparativa estructural de las funciones específicas que cumple cada lenguaje dentro de este proyecto de laboratorio:</p>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tecnología</th>
+                                <th>Rol Principal</th>
+                                <th>Componente Aplicado en este Proyecto</th>
+                                <th>Tipo de Procesamiento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>HTML5</strong></td>
+                                <td>Estructuración</td>
+                                <td>Contenedores estructurados, formularios de entrada y tablas de datos de navegación.</td>
+                                <td>Estático / Semántico</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CSS3</strong></td>
+                                <td>Presentación</td>
+                                <td>Grid adaptativo para simular formas geométricas complejas y ocultamiento de secciones.</td>
+                                <td>Renderizado Visual</td>
+                            </tr>
+                            <tr>
+                                <td><strong>JavaScript</strong></td>
+                                <td>Interactividad</td>
+                                <td>Validación condicional de campos de texto y algoritmos de conversión de bases numéricas.</td>
+                                <td>Lógico / Dinámico (Cliente)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="sec-imagenes" style="margin-top: 40px; border-top: 1px dashed #ccc; padding-top: 20px; margin-bottom: 20px;">
+                    <h3>3. Ejecución del Cliente</h3>
+                    <p>El siguiente gráfico representa de manera esquemática cómo interactúan las tres tecnologías cuando el navegador interpreta los scripts y estilos cargados localmente.</p>
+                    
+                    <div style="text-align: center; background-color: #fafafa; padding: 15px; border: 1px solid #eee; border-radius: 4px;">
+                        <img src="imagenes/338-1733217432633.jpg" alt="Flujo de trabajo de HTML, CSS y JavaScript en el navegador" style="max-width: 100%; height: auto; max-height: 250px; border: 1px solid #ddd; border-radius: 4px;">
+                        <br>
+                        <caption style="display: block; margin-top: 5px; font-size: 12px; color: #666;"><em>Figura 1.1: Integración functional del flujo HTML5 + CSS3 + JavaScript.</em></caption>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag2" class="page-section">
+                <h2>Pág 2: Diseños y Estilos con CSS</h2>
+                <hr>
+                <p style="margin-bottom: 20px;"><strong>NO SIN IMÁGENES - TODO CON ESTILOS GEOMÉTRICOS</strong></p>
+
+                <div class="grid-banderas">
+                    <div class="caja-diseno">
+                        <div class="bandera">
+                            <div class="franja bo-rojo"></div>
+                            <div class="franja bo-amarillo"></div>
+                            <div class="franja bo-verde"></div>
+                        </div>
+                        <p><strong>Diseño 1:</strong> Bandera tricolor horizontal</p>
+                    </div>
+
+                    <div class="caja-diseno">
+                        <div class="bandera" style="background-color: #0056b3; display: flex; align-items: center; justify-content: center;">
+                            <div style="width: 70%; height: 45%; background-color: #FF851B; border: 2px solid white; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 60%; height: 50%; background-color: #0056b3;"></div>
+                            </div>
+                        </div>
+                        <p><strong>Diseño 2:</strong> Bloques concéntricos de color</p>
+                    </div>
+
+                    <div class="caja-diseno">
+                        <div class="bandera" style="flex-direction: row;">
+                            <div style="flex: 1; background-color: #DA291C;"></div>
+                            <div style="flex: 1; background-color: #F4E11E;"></div>
+                            <div style="flex: 1; background-color: #007A33;"></div>
+                        </div>
+                        <p><strong>Diseño 3:</strong> Bandera tricolor vertical</p>
+                    </div>
+
+                    <div class="caja-diseno">
+                        <div class="bandera" style="background-color: transparent; border: none; align-items: center; justify-content: center;">
+                            <div style="width: 105px; height: 105px; background-color: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div style="width: 50px; height: 50px; background-color: #ddd; border-radius: 50%;"></div>
+                            </div>
+                        </div>
+                        <p><strong>Diseño 4:</strong> Forma circular concéntrica</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag3" class="page-section">
+                <h2>Pág 3: Formulario con Validación JS</h2>
+                <hr>
+                <form id="formularioWeb" onsubmit="verificarCampos(event)">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre">
+
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo">
+
+                    <label for="comentario">Comentarios/Mensaje:</label>
+                    <textarea id="comentario" rows="3"></textarea>
+
+                    <button type="submit" class="btn-accion">BOTON (Verificar)</button>
+                </form>
+            </section>
+
+            <section id="pag4" class="page-section">
+                <h2>Pág 4: Conversor de Bases Numéricas</h2>
+                <hr>
+                <div style="background: #fafafa; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                    <h3>CONVERSOR DE BASES</h3>
+                    
+                    <label>BASE ORIGEN (NÚMERO DECIMAL):</label>
+                    <input type="number" id="numDecimal" placeholder="Ej: 255">
+
+                    <label>BASE DESTINO:</label>
+                    <select id="baseDestino">
+                        <option value="2">Binario</option>
+                        <option value="8">Octal</option>
+                        <option value="16">Hexadecimal</option>
+                    </select>
+
+                    <button onclick="realizarCalculo()" class="btn-accion">CALC</button>
+                    
+                    <div id="resultadoCaja" class="caja-resultado">
+                        El resultado se mostrará aquí.
+                    </div>
+                </div>
+            </section>
+
+            <section id="pag5" class="page-section">
+                <h2>Pág 5: Laboratorio - Consulta API Clima</h2>
+                <hr>
+                <div style="background: #fafafa; padding: 20px; border: 1px solid #ddd; border-radius: 4px; margin-top: 15px;">
+                    <h1>CONSULTA EL CLIMA</h1>
+                    <form onsubmit="event.preventDefault();">
+                        <input type="text" id="ciudad" placeholder="Nombre de la ciudad">
+                        <button type="button" class="btn-accion" style="background-color: #007BFF;" onclick="obtenerClima()">Consultar</button>
+                    </form>
+                    <div id="resultado" class="caja-resultado clima-alerta" style="margin-top: 20px;"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Página desarrollada por Mijael Josué Torrez Rodríguez</p>
+    </footer>
+
+    <script>
+        // Función para alternar dinámicamente las secciones de la página
+        function showPage(pageId) {
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        // Validación de campos vacíos para la Pág 3
+        function verificarCampos(event) {
+            event.preventDefault(); 
+            
+            const txtNombre = document.getElementById('nombre').value.trim();
+            const txtCorreo = document.getElementById('correo').value.trim();
+            const txtComentario = document.getElementById('comentario').value.trim();
+
+            if (txtNombre === "" || txtCorreo === "" || txtComentario === "") {
+                alert("ERROR: ¡Todos los campos deben estar llenos antes de continuar!");
+            } else {
+                alert("ÉXITO: Todos los campos están correctamente llenos.");
+            }
+        }
+
+        // Función del conversor de bases matemáticas para la Pág 4
+        function realizarCalculo() {
+            const numeroInput = document.getElementById('numDecimal').value;
+            const baseSeleccionada = parseInt(document.getElementById('baseDestino').value);
+            const numeroDecimal = parseInt(numeroInput);
+
+            if (numeroInput === "" || isNaN(numeroDecimal)) {
+                alert("Por favor, introduce un número decimal válido.");
+                return;
+            }
+
+            let resultadoConversion = numeroDecimal.toString(baseSeleccionada).toUpperCase();
+            
+            let nombreBase = baseSeleccionada === 2 ? "Binario" : (baseSeleccionada === 8 ? "Octal" : "Hexadecimal");
+            document.getElementById('resultadoCaja').innerText = `Resultado (${nombreBase}): ${resultadoConversion}`;
+        }
+
+        // =========================================================
+        // CÓDIGO INTEGRADO ADAPTADO CONFIGURACIÓN DOCENTE (CORREGIDO)
+        // =========================================================
+        async function obtenerClima(){
+            var ciudadInput = document.getElementById("ciudad").value.trim();
+            var apiKey = "ea96cceea36ff88cd11ebd9f8007a55c"; // Key de la docente
+            
+            if(ciudadInput === "") {
+                alert("Por favor, introduce el nombre de una ciudad.");
+                return;
+            }
+            
+            try {
+                // Paso 1: Llamamos a la API de Geocoding para transformar el texto de la ciudad en latitud y longitud
+                var geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(ciudadInput)}&limit=1&appid=${apiKey}`;
+                var geoRespuesta = await fetch(geoUrl);
+                var geoDatos = await geoRespuesta.json();
+                
+                if(!geoRespuesta.ok || geoDatos.length === 0){
+                    throw new Error("Ciudad no encontrada en el mapa geográfico.");
+                }
+                
+                // Extraemos las coordenadas exactas de la ciudad escrita
+                var lat = geoDatos[0].lat;
+                var lon = geoDatos[0].lon;
+                var nombreCiudadReal = geoDatos[0].name;
+
+                // Paso 2: Cambiamos a la versión 2.5 (Gratuita) usando las coordenadas obtenidas
+                var url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`;
+                
+                var respuesta = await fetch(url);
+                if(!respuesta.ok){
+                    throw new Error("No se pudo conectar con el servicio meteorológico");
+                }
+                
+                var datos = await respuesta.json();
+                
+                // Mapeamos las propiedades internas según la respuesta del endpoint 2.5
+                var descripcion = datos.weather[0].description;
+                var temperatura = datos.main.temp;
+                
+                document.getElementById("resultado").innerHTML = `El clima en ${nombreCiudadReal} es ${descripcion} con una temperatura de ${temperatura}°C.`;
+            }
+            catch(error){
+                document.getElementById("resultado").innerHTML = "Error al obtener el clima: " + error.message;
+            }
+        }
+    </script>
+</body>
+</html>
